@@ -18,6 +18,7 @@ public:
     }
 
     const int &getLuck() const {
+       // luck = 100; //cant be changed
         return luck;
     }
 
@@ -74,6 +75,7 @@ void changeLuck(Person &p1, Person &p2){
 }
 void output(const Person &p1, const Person &p2){
     if (p1.getLuck() > p2.getLuck()){
+       // p1.setLuck(p2.getLuck()); //error, since it cant be changed
         cout << "The luckiest – " << p1.getName() << ", luck: " << p1.getLuck() << endl;
         cout << "The least lucky – " << p2.getName() << ", luck: " << p2.getLuck() << endl;
     }
@@ -122,7 +124,10 @@ int main() {
 
     cout << &numbers[0] << "    " << &numbers[1];
 
-
+    // constant
+    const int a = 20;
+    //a = 30;
+    persons[0].getLuck() = 0;
 
     return 0;
 }
