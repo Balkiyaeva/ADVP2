@@ -107,5 +107,22 @@ int main() {
 
     delete dyno; //it is needed to deallocate memory, if it's not deleted, memory address will be taken and another object won't be created to this address
 
+
+    //PART 2
+    int arr[5][5];
+    for (int i = 0; i < 5; i++){
+        for (int j = 0; j < 5; j++){
+            arr[i][j] = randomizer(10);
+        }
+    }
+
+    vector<int> numbers;
+    numbers.push_back(randomizer(10));
+    numbers.push_back(randomizer(10));
+
+    cout << &numbers[0] << "    " << &numbers[1];
+
+
+
     return 0;
 }
