@@ -101,9 +101,10 @@ int main() {
 
     changeLuck(persons[randomizer(5)], persons[randomizer(5)]);
 
-    Person *dyno = new Person("Rano", 9, randomizer(11));
+    Person *dyno = new Person("Rano", 9, randomizer(11)); //allocating memory in heap
 
     changeLuck(*dyno, persons[randomizer(5)]);
+
     delete dyno; //it is needed to deallocate memory, if it's not deleted, memory address will be taken and another object won't be created to this address
 
     return 0;
