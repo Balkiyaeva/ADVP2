@@ -127,7 +127,7 @@ int main() {
     // constant
     const int a = 20;
     //a = 30;
-    persons[0].getLuck() = 0;
+    //persons[0].getLuck() = 0;
 
     return 0;
 }
